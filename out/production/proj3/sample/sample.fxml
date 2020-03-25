@@ -30,9 +30,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField minWidth="150.0" prefWidth="150.0" GridPane.columnIndex="1" />
-                  <TextField minWidth="200.0" prefHeight="25.0" prefWidth="248.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField minWidth="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="fname" minWidth="150.0" prefWidth="150.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="lname" minWidth="200.0" prefHeight="25.0" prefWidth="248.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="credits" minWidth="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefWidth="100.0" text="First name" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefWidth="100.0" text="Last name" GridPane.rowIndex="1" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefWidth="100.0" text="Number of credits" GridPane.rowIndex="2" />
@@ -59,16 +59,18 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <RadioButton alignment="CENTER_LEFT" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="Instate">
+                              <RadioButton fx:id="inst" alignment="CENTER_LEFT" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="Instate">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="Student" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton alignment="CENTER_LEFT" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="Outstate" toggleGroup="$Student" GridPane.rowIndex="1" />
-                              <RadioButton alignment="CENTER_LEFT" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="International" toggleGroup="$Student" GridPane.rowIndex="2" />
-                              <CheckBox mnemonicParsing="false" text="Funding" GridPane.columnIndex="1" />
-                              <CheckBox mnemonicParsing="false" text="Tristate Student" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <CheckBox mnemonicParsing="false" text="Exchange Student" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <RadioButton fx:id="outs" alignment="CENTER_LEFT" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="Outstate" toggleGroup="$Student" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="intr" alignment="CENTER_LEFT" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="International" toggleGroup="$Student" GridPane.rowIndex="2" />
+                              <TextField fx:id="fund" minWidth="100.0" prefWidth="150.0" GridPane.columnIndex="2" /> 
+                              <CheckBox fx:id="tristate" mnemonicParsing="false" text="Tristate Student" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="exchange" mnemonicParsing="false" text="Exchange Student" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefWidth="100.0" text="Funding" GridPane.columnIndex="1" />
+                              
                            </children>
                         </GridPane>
                      </children>
@@ -78,8 +80,8 @@
                         <VBox layoutX="7.0" layoutY="6.0" prefHeight="121.0" prefWidth="100.0" spacing="10.0">
                            <children>
                               <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBtnPress" text="Add" />
-                              <Button mnemonicParsing="false" text="Remove" />
-                              <Button mnemonicParsing="false" text="Print" />
+                              <Button fx:id="rmvBtn" mnemonicParsing="false"  onAction="#rmvBtnPress" text="Remove" />
+                              <Button fx:id="printBtn" mnemonicParsing="false" onAction="#printBtnPress" text="Print" />
                            </children>
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
