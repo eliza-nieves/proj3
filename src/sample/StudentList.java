@@ -77,6 +77,10 @@ public class StudentList
       }
    }
    
+   public int len() {
+	   return length;
+   }
+   
    public String toString() {
 	   String res = "";
 	   

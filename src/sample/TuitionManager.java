@@ -125,6 +125,7 @@ public class TuitionManager
       list.remove(temp);
       return;
    }
+   
 
    /**
     * Prints out the list.
