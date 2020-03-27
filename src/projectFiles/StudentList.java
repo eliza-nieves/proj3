@@ -76,7 +76,11 @@ public class StudentList
          System.out.println(list[i].toString() + " tuition due: $" + list[i].tuitionDue() + "\n");
       }
    }
-   
+
+   public int len() {
+      return length;
+   }
+
    public String toString() {
 	   String res = "";
 	   
