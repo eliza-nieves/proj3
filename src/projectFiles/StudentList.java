@@ -77,10 +77,19 @@ public class StudentList
       }
    }
 
+   /**
+    * Gives the length of the current list.
+    * @return int with the length of the list.
+    */
    public int len() {
       return length;
    }
 
+   /**
+    * Creates a string representation of the student list, giving
+    * each student's name, status, and tuition due.
+    * @return The String representation of the student list.
+    */
    public String toString() {
 	   String res = "";
 	   
